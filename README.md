@@ -14,7 +14,7 @@ Files are in the `/scripts` directory. You'll need to add the name to the `/conf
 There are bascially two important methods:
 
 ```
-DaBot.say(to, message, preformat)
+DaBot.say(to, message, preformat);
 to: string - @user, #room or RID 
 message: string or array
 preformat: boolean
