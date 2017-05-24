@@ -127,7 +127,7 @@ const initSMTP = function(DaBot)
         }
         else
         {
-            DaBot.say(to, 'Missing Parameters.');
+            DaBot.say(to, help, true);
         }
     }
 };
