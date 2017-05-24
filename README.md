@@ -1,4 +1,4 @@
-#DaBot for Rocket.Chat
+# DaBot for Rocket.Chat
 DDP client based bot for Rocket.Chat
 
 ### Installation
