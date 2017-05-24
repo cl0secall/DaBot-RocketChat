@@ -1,0 +1,26 @@
+{
+  "name": "dabot-rocketchat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EllisGL",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.1",
+    "ddp": "^0.12.1",
+    "ddp-login": "^1.0.10",
+    "ddp-random": "^0.8.1-1",
+    "ip": "^1.1.5",
+    "lodash": "^4.17.4",
+    "ping-lite": "^1.0.2",
+    "portchecker": "^0.1.2",
+    "request": "^2.81.0",
+    "string": "^3.3.3",
+    "traceroute-lite": "^0.1.0",
+    "whois": "^2.3.9",
+    "whois-ux": "0.0.2"
+  }
+}

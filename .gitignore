@@ -1,0 +1,4 @@
+.idea
+config/app.js
+scripts/domain.js
+node_modules
