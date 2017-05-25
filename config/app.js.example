@@ -21,7 +21,7 @@ module.exports = {
     // do not set `useSockJs` option if `url` is used
     url: 'wss://yourhosthere/websocket',
     rooms: ['@general'],
-    triggerPrefix: '!',
+    triggerPrefixes: ['!'],
     scripts: [
         'dns',
         'ip',

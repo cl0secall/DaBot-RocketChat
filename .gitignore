@@ -1,4 +1,5 @@
 .idea
 config/app.js
 scripts/domain.js
+scripts/leads.js
 node_modules

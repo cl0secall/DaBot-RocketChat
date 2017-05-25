@@ -247,20 +247,18 @@ function initApp(DaBot)
 
         var cmd;
         var args;
-        var patt = new RegExp('^' + DaBot.config.app.triggerPrefix + "(\\w+)\s?(.*)?", 'im');
+        var patt = new RegExp('^[' + DaBot.config.app.triggerPrefixes.join('') + "](\\w+)\\s?(.*)?", 'im');
         var match;
 
         // Channel Messages
         if (msg.msg === 'changed' && msg.collection === 'stream-room-messages')
         {
-
             // Do look at our own messsages!
             if (msg.fields.args[0].u.username !== DaBot.config.app.user)
             {
                 // Lets look for our trigger!
-                if (msg.fields.args[0].msg.charAt(0) === DaBot.config.app.triggerPrefix)
+                if (DaBot.config.app.triggerPrefixes.indexOf(msg.fields.args[0].msg.charAt(0)) > -1)
                 {
-
                     args = msg.fields.args[0].msg.split(' ');
                     cmd  = args.shift();
 
@@ -285,7 +283,8 @@ function initApp(DaBot)
             // DMs
             // Lets look for our trigger!
             // Lets look for our trigger!
-            if (msg.fields.args[0].text.charAt(0) === DaBot.config.app.triggerPrefix)
+            //if (msg.fields.args[0].text.charAt(0) === DaBot.config.app.triggerPrefix)
+            if (DaBot.config.app.triggerPrefixes.indexOf(msg.fields.args[0].msg.charAt(0)) > -1)
             {
 
                 args = msg.fields.args[0].text.split(' ');
