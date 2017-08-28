@@ -281,10 +281,8 @@ function initApp(DaBot)
         else if (msg.msg === 'changed' && msg.collection === 'stream-notify-user')
         {
             // DMs
-            // Lets look for our trigger!
-            // Lets look for our trigger!
-            //if (msg.fields.args[0].text.charAt(0) === DaBot.config.app.triggerPrefix)
-            if (DaBot.config.app.triggerPrefixes.indexOf(msg.fields.args[0].msg.charAt(0)) > -1)
+             // Lets look for our trigger!
+            if (DaBot.config.app.triggerPrefixes.indexOf(msg.fields.args[0].text.charAt(0)) > -1)
             {
 
                 args = msg.fields.args[0].text.split(' ');
