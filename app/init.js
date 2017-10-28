@@ -77,8 +77,6 @@ function initApp(DaBot)
                     console.dir(err);
                 }
 
-                //console.log('USER: ');
-                //console.dir(data);
                 DaBot.call('sendMessage', [{
                                _id: DaBot.Random.id(),
                                rid: data.rid,
@@ -92,7 +90,6 @@ function initApp(DaBot)
                                    console.log(message);
                                }
                            });
-
             })
         }
         else
@@ -227,8 +224,6 @@ function initApp(DaBot)
 
     DaBot.on('message', function (msg) {
         msg = JSON.parse(msg);
-        //console.log("ddp message: ");
-        //console.dir(msg);
 
         if(msg.msg === 'added' && msg.collection === 'users')
         {
@@ -247,7 +242,7 @@ function initApp(DaBot)
 
         var cmd;
         var args;
-        var patt = new RegExp('^[' + DaBot.config.app.triggerPrefixes.join('') + "](\\w+)\\s?(.*)?", 'im');
+        var patt = new RegExp('^' + DaBot.config.app.triggerPrefix + "(\\w+)\\s?(.*)?", 'im');
         var match;
 
         // Channel Messages

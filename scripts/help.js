@@ -9,8 +9,6 @@ var Init = function (DaBot) {
         else if(DaBot.help.hasOwnProperty(args[0]))
         {
             DaBot.say(to, DaBot.help[args[0]], true);
-
-
         }
     }
 };

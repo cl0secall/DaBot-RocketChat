@@ -82,7 +82,7 @@ var taunts = [
     'I\'m gonna hit you so hard, it will make your ancestors dizzy!',
     'I would not do such things if I were you.',
     'You stink!',
-    'YOU\'RE A NOOB!\''
+    'YOU\'RE A NOOB!'
 ];
 
 // Random generator
@@ -115,8 +115,8 @@ const initDice = function(DaBot)
         '==    Dice  Help    ==',
         '======================',
         'Rolls some dice.',
-        'Usage: ' + DaBot.config.app.triggerPrefix + 'dice [XdY] - X is the number of dice (up to 120)',
-        '       Y is sids per die',
+        'Usage: ' + DaBot.config.app.triggerPrefix + 'dice [XdY] - X is the number of dice (up to 144)',
+        '       Y is the number of side of the die (144 max)',
         '       ' + DaBot.config.app.triggerPrefix + 'dice - rolls 1 6-sided die',
         '       ' + DaBot.config.app.triggerPrefix + 'dice 2d20 - rolls 2 20 sided dice'
     ];
@@ -147,7 +147,7 @@ const initDice = function(DaBot)
                 {
                     DaBot.say(to, help, true);
                 }
-                else if(n1 > 0 && n1 < 121 && n2 > 2 && n2 < 121)
+                else if(n1 > 0 && n1 < 145 && n2 > 2 && n2 < 145)
                 {
                     var r      = roll(n1, n2);
                     var rTotal = r.reduce(function(sum, value)
@@ -158,13 +158,13 @@ const initDice = function(DaBot)
                     var o =  r.join(', ') + ' Total: ' + rTotal;
                     DaBot.say(to, o);
                 }
-                else if(n1 > 120)
+                else if(n1 > 144)
                 {
-                    DaBot.say(to, 'Who carries over 120 dice with them?!');
+                    DaBot.say(to, 'Who carries over 144 dice with them?!');
                 }
-                else if(n2 > 120)
+                else if(n2 > 144)
                 {
-                    DaBot.say(to, 'Show me a die with more that 120 faces!!');
+                    DaBot.say(to, 'Show me a die with more that 144 faces!!');
                 }
                 else
                 {

@@ -15,7 +15,8 @@ const initCoin = function (DaBot) {
     DaBot.help.coin = help;
     DaBot.cmds.coin = function(to, args, orig)
     {
-        DaBot.say(to, (Math.random() < 0.5) ? 'Heads!' : 'Tails!');
+        var rnd = Math.floor(Math.random() * (100 - 1)) + 1;
+        DaBot.say(to, (rnd %2 === 0) ? 'Heads!' : 'Tails!');
     }
 };
 
