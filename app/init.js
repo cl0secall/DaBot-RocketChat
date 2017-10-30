@@ -252,7 +252,7 @@ function initApp(DaBot)
             if (msg.fields.args[0].u.username !== DaBot.config.app.user)
             {
                 // Lets look for our trigger!
-                if (DaBot.config.app.triggerPrefixe === msg.fields.args[0].msg.charAt(0))
+                if (DaBot.config.app.triggerPrefix === msg.fields.args[0].msg.charAt(0))
                 {
                     args = msg.fields.args[0].msg.split(' ');
                     cmd  = args.shift();
@@ -277,7 +277,7 @@ function initApp(DaBot)
         {
             // DMs
              // Lets look for our trigger!
-            if (DaBot.config.app.triggerPrefixe  === msg.fields.args[0].text.charAt(0))
+            if (DaBot.config.app.triggerPrefix === msg.fields.args[0].text.charAt(0))
             {
                 args = msg.fields.args[0].text.split(' ');
                 cmd  = args.shift();
