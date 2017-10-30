@@ -277,9 +277,8 @@ function initApp(DaBot)
         {
             // DMs
              // Lets look for our trigger!
-            if (DaBot.config.app.triggerPrefixes.indexOf(msg.fields.args[0].text.charAt(0)) > -1)
+            if (DaBot.config.app.triggerPrefixe  === msg.fields.args[0].text.charAt(0))
             {
-
                 args = msg.fields.args[0].text.split(' ');
                 cmd  = args.shift();
 
