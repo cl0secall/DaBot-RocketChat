@@ -38,3 +38,5 @@ const init8ball = function (DaBot) {
         DaBot.say(to, answers[Math.floor(Math.random() * answers.length)]);
     }
 };
+
+module.exports = init8ball;
