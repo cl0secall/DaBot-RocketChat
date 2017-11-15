@@ -33,7 +33,7 @@ const init8ball = function (DaBot) {
     ];
 
     DaBot.help.DaBot.push(DaBot.config.app.triggerPrefix + '8ball: Shake the 8 ball, get answer.');
-    DaBot.help.8ball = help;
+    DaBot.help['8ball'] = help;
 
     DaBot.cmds['8ball'] = function (to, args, orig) {
         DaBot.say(to, answers[Math.floor(Math.random() * answers.length)]);
