@@ -29,10 +29,11 @@ const init8ball = function (DaBot) {
         '======================',
         '==   Magic 8 Ball   ==',
         '======================',
-        DaBot.config.app.triggerPrefix + '8ball: Shake the 8 ball.'
+        DaBot.config.app.triggerPrefix + '8ball: Shake the 8 ball, get answer.'
     ];
 
-    DaBot.help.DaBot.push(DaBot.config.app.triggerPrefix + 'dice: Roll some dice.');
+    DaBot.help.DaBot.push(DaBot.config.app.triggerPrefix + '8ball: Shake the 8 ball, get answer.');
+    DaBot.help.8ball = help;
 
     DaBot.cmds['8ball'] = function (to, args, orig) {
         DaBot.say(to, answers[Math.floor(Math.random() * answers.length)]);
