@@ -1,3 +1,4 @@
+'use strict';
 const config    = require('../config');
 const DDPClient = require('ddp');
 const login     = require('ddp-login');
@@ -25,7 +26,6 @@ DaBot.help      = {
         DaBot.config.app.triggerPrefix + 'help {command}: Shows the help for {command}'
     ]
 };
-
 
 // Keeping as much logic out of the index.js files as possible
 require('./init.js')(DaBot);

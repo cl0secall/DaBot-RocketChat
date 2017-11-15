@@ -8,9 +8,9 @@
   },
   "author": "EllisGL",
   "license": "MIT",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/ellisgl/DaBot-RocketChat.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ellisgl/DaBot-RocketChat.git"
   },
   "dependencies": {
     "async": "^2.4.1",
@@ -27,6 +27,8 @@
     "string": "^3.3.3",
     "traceroute-lite": "^0.1.0",
     "whois": "^2.3.9",
-    "whois-ux": "0.0.2"
+    "whois-ux": "0.0.2",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
   }
 }
